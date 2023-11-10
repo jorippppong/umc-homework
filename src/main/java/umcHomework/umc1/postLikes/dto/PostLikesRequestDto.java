@@ -1,4 +1,4 @@
-package umcHomework.umc1.PostLikes.dto;
+package umcHomework.umc1.postLikes.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

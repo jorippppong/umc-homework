@@ -1,18 +1,17 @@
-package umcHomework.umc1.PostLikes.service;
+package umcHomework.umc1.postLikes.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import umcHomework.umc1.PostLikes.dto.PostLikesRequestDto;
-import umcHomework.umc1.PostLikes.entity.PostLikes;
-import umcHomework.umc1.PostLikes.repository.PostLikesRepository;
+import umcHomework.umc1.postLikes.dto.PostLikesRequestDto;
+import umcHomework.umc1.postLikes.entity.PostLikes;
+import umcHomework.umc1.postLikes.repository.PostLikesRepository;
 import umcHomework.umc1.member.entity.Member;
 import umcHomework.umc1.member.repository.MemberRepository;
 import umcHomework.umc1.post.entity.Post;
 import umcHomework.umc1.post.repository.PostRepository;
 import umcHomework.umc1.post.service.PostService;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
