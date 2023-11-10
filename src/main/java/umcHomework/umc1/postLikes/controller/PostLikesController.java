@@ -1,11 +1,11 @@
-package umcHomework.umc1.PostLikes.controller;
+package umcHomework.umc1.postLikes.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import umcHomework.umc1.PostLikes.dto.PostLikesRequestDto;
-import umcHomework.umc1.PostLikes.service.PostLikesService;
+import umcHomework.umc1.postLikes.dto.PostLikesRequestDto;
+import umcHomework.umc1.postLikes.service.PostLikesService;
 
 @RestController
 @RequiredArgsConstructor

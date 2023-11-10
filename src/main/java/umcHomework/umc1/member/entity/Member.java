@@ -1,7 +1,7 @@
 package umcHomework.umc1.member.entity;
 
 import lombok.*;
-import umcHomework.umc1.PostLikes.entity.PostLikes;
+import umcHomework.umc1.postLikes.entity.PostLikes;
 import umcHomework.umc1.member.dto.MemberRequestDto;
 import umcHomework.umc1.post.entity.Post;
 

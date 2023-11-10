@@ -2,7 +2,7 @@ package umcHomework.umc1.post.entity;
 
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
-import umcHomework.umc1.PostLikes.entity.PostLikes;
+import umcHomework.umc1.postLikes.entity.PostLikes;
 import umcHomework.umc1.member.entity.Member;
 import umcHomework.umc1.post.dto.PostRequestDto;
 
