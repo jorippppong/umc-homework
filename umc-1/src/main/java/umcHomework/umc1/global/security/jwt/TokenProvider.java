@@ -36,7 +36,7 @@ public class TokenProvider {
     }
 
     public TokenDto generateTokenDto(Authentication authentication) {
-        // 권한들 가져오기
+        // 권한들 가져오기 : , 를 기준으로 하나의 문자열로 만듦
         String authorities = authentication.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.joining(","));
@@ -48,7 +48,7 @@ public class TokenProvider {
         String accessToken = Jwts.builder()
                 .setSubject(authentication.getName())       // payload "sub": "name"
                 .claim(AUTHORITIES_KEY, authorities)        // payload "auth": "ROLE_USER"
-                .setExpiration(accessTokenExpiresIn)        // payload "exp": 151621022 (ex)
+                .setExpiration(accessTokenExpiresIn)        // payload "exp": 151621022 (만료 기간)
                 .signWith(key, SignatureAlgorithm.HS512)    // header "alg": "HS512"
                 .compact();
 
@@ -74,7 +74,7 @@ public class TokenProvider {
             throw new RuntimeException("권한 정보가 없는 토큰입니다.");
         }
 
-        // 클레임에서 권한 정보 가져오기
+        // 클레임에서 권한 정보 가져오기 : , 를 기준으로 문자열 잘라서 권한들 가져움
         Collection<? extends GrantedAuthority> authorities =
                 Arrays.stream(claims.get(AUTHORITIES_KEY).toString().split(","))
                         .map(SimpleGrantedAuthority::new)

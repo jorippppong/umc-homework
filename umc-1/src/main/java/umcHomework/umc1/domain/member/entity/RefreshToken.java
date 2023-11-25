@@ -3,16 +3,16 @@ package umcHomework.umc1.domain.member.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 
 @Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 public class RefreshToken {
     @Id
     @Column(name = "RT_KEY")

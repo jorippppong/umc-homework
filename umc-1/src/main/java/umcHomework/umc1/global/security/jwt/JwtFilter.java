@@ -1,19 +1,16 @@
 package umcHomework.umc1.global.security.jwt;
 
-//import jakarta.servlet.FilterChain;
-//import jakarta.servlet.ServletException;
-//import jakarta.servlet.http.HttpServletRequest;
-//import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 
 @RequiredArgsConstructor
@@ -23,8 +20,9 @@ public class JwtFilter extends OncePerRequestFilter {
     public static final String BEARER_PREFIX = "Bearer ";
     private final TokenProvider tokenProvider;
 
-    // 실제 필터링 로직은 doFilterInternal 에 들어감
-    // JWT 토큰의 인증 정보를 현재 쓰레드의 SecurityContext 에 저장하는 역할
+    // 실제 필터링 로직이 구현된 method, client의 요청이 들어오면 이 method가 호출됨
+    // 먼저, request header 에서 jwt 토큰을 추출
+    // JWT 토큰의 인증 정보를 현재 thread 의 SecurityContext에 저장 하는 역할
     // ⭐
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {

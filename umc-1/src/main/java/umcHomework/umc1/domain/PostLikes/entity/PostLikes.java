@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import umcHomework.umc1.domain.member.entity.Member;
 import umcHomework.umc1.domain.post.entity.Post;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Getter

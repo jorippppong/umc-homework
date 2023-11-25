@@ -6,7 +6,7 @@ import umcHomework.umc1.domain.PostLikes.entity.PostLikes;
 import umcHomework.umc1.domain.member.entity.Member;
 import umcHomework.umc1.domain.post.dto.PostRequestDto;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 

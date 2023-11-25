@@ -1,11 +1,12 @@
 package umcHomework.umc1.domain.member.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 import umcHomework.umc1.domain.PostLikes.entity.PostLikes;
 import umcHomework.umc1.domain.member.dto.MemberRequestDto;
 import umcHomework.umc1.domain.post.entity.Post;
 
-import javax.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
